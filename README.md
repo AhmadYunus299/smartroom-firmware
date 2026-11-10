@@ -1,4 +1,4 @@
-# SmartRoom V2
+# SmartRoom
 
 Firmware ESP32 untuk monitor ruangan: suhu/kelembapan (DHT22), cahaya (LDR), gerak (PIR),
 layar OLED SSD1306, alarm suhu (LED + buzzer + tombol acknowledge), dan telemetri via MQTT.
