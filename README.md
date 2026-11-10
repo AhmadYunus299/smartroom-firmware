@@ -72,5 +72,4 @@ Topik berawalan `smartroom/<DEVICE_ID>/`:
   nama file tidak membedakan huruf besar-kecil sehingga bentrok.
 - Broker publik (`broker.hivemq.com`) tidak aman: siapa pun yang tahu topik bisa mengirim perintah.
   Pakai broker pribadi dengan autentikasi untuk penggunaan nyata.
-- DHT22 4 pin memerlukan pull-up 10k antara data dan 3V3.
 - Threshold dari MQTT tidak disimpan setelah restart.
