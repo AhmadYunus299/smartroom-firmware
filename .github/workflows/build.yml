@@ -1,0 +1,31 @@
+name: build
+on: [push, pull_request]
+jobs:
+  arduino:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Siapkan secrets.h dari contoh
+        run: cp firmware/smartroom/secrets.h.example firmware/smartroom/secrets.h
+      - uses: arduino/compile-sketches@v1
+        with:
+          fqbn: esp32:esp32:esp32
+          sketch-paths: |
+            - firmware/smartroom
+          platforms: |
+            - name: esp32:esp32
+              version: 3.1.1
+              source-url: https://espressif.github.io/arduino-esp32/package_esp32_index.json
+          libraries: |
+            - name: DHT sensor library
+              version: 1.4.7
+            - name: Adafruit Unified Sensor
+              version: 1.1.15
+            - name: Adafruit GFX Library
+              version: 1.13.0
+            - name: Adafruit SSD1306
+              version: 2.5.17
+            - name: PubSubClient
+              version: 2.8
+            - name: ArduinoJson
+              version: 7.4.3

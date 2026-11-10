@@ -1,0 +1,7 @@
+firmware/smartroom/secrets.h
+.pio/
+.vscode/*
+!.vscode/extensions.json
+build/
+*.elf
+*.bin
